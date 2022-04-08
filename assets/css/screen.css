@@ -1421,7 +1421,7 @@ iframe.instagram-media + script + :not([id]) {
 }
 
 .footer-cta.cta-alt {
-    padding: 2vmin 4vmin 12vmin;
+    padding: 2vmin 4vmin;
     background: transparent;
 }
 
