@@ -68,6 +68,35 @@ pre, code, kbd, samp {
     font-family: var(--font-mono) !important;
 }
 
+.kg-toggle-card-icon {
+    display: block !important;
+}
+
+.kg-button-card a.kg-btn {
+    font-family: var(--font-sans) !important;
+}
+
+.kg-header-card a.kg-header-card-button {
+    font-family: var(--font-sans) !important;
+}
+
+.kg-nft-card a.kg-nft-card-container {
+    font-family: var(--font-sans) !important;
+}
+
+.kg-product-card h4.kg-product-card-title {
+    font-family: var(--font-sans) !important;
+}
+
+.kg-product-card .kg-product-card-description ol,.kg-product-card .kg-product-card-description p,.kg-product-card .kg-product-card-description ul {
+    font-family: var(--font-sans) !important;
+}
+
+.kg-product-card a.kg-product-card-button {
+    font-family: var(--font-sans) !important;
+}
+
+
 
 /* 2. Layout - Page building blocks
 /* ---------------------------------------------------------- */
