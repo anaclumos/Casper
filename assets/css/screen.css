@@ -58,6 +58,16 @@ production stylesheet in assets/built/screen.css
 
 }
 
+body {
+    font-family: var(--font-sans-serif) !important;
+    word-wrap: break-word;
+    word-break: keep-all;
+}
+  
+pre, code, kbd, samp {
+    font-family: var(--font-mono) !important;
+}
+
 
 /* 2. Layout - Page building blocks
 /* ---------------------------------------------------------- */
