@@ -1262,7 +1262,7 @@ iframe.instagram-media + script + :not([id]) {
 }
 
 .article-comments {
-    margin: 6vmin 0 0 0;
+    margin: 6vmax 0 0 0;
 }
 
 /* -----old------ */
