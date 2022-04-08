@@ -38,6 +38,9 @@
     <meta name="theme-color" content="#5597ec">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/themes/prism-tomorrow.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/prism.min.js"></script>
+    <script>
+    document.getElementById("ghost-version").innerText = document.getElementsByName("generator")[0].content;
+    </script>
 
     {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
     it should always be the last tag before the closing head tag --}}
@@ -98,7 +101,7 @@
             <nav class="site-footer-nav">
                 {{navigation type="secondary"}}
             </nav>
-            <div><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
+            <div><a href="https://github.com/TryGhost/Ghost" target="_blank" rel="noopener">Ghost 4.20</a> self-hosted on <a href="https://www.digitalocean.com/" target="_blank" rel="noopener">DigitalOcean</a> distributed by <a href="https://www.cloudflare.com/" target="_blank" rel="noopener">Cloudflare</a>.</div>
         </div>
     </footer>
 
