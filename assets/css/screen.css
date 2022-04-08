@@ -2098,6 +2098,10 @@ html.dark-mode .kg-header-card h3.kg-header-card-subheader {
     html.auto-color .kg-header-card h3.kg-header-card-subheader {
         color: #fff;
     }
+
+    html.auto-color .footer-cta.cta-alt h2 {
+        color: #fff;
+    }
 }
 
 /*
