@@ -37,7 +37,6 @@
     <meta name="theme-color" content="#5597ec">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/agate.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
-    <script>document.addEventListener("DOMContentLoaded", hljs.highlightAll());</script>
     <script>
     document.getElementById("ghost-version").innerText = document.getElementsByName("generator")[0].content;
     </script>
@@ -125,6 +124,7 @@ $(document).ready(function () {
     // FitVids - Makes video embeds responsive
     $(".gh-content").fitVids();
 });
+hljs.highlightAll();
 </script>
 
 {{!-- Ghost outputs required functional scripts with this tag - it should always be the last thing before the closing body tag --}}
