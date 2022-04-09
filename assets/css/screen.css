@@ -1893,6 +1893,10 @@ html.dark-mode .gh-content > [id] {
     color: rgba(255, 255, 255, 0.9);
 }
 
+html.dark-mode .gh-content pre {
+    background: #2f2f2f;
+}
+
 html.dark-mode .gh-content :not(pre) > code {
     background: color-mod(var(--color-darkgrey) l(+6%));
     border-color: color-mod(var(--color-darkmode) l(+8%));
@@ -1913,6 +1917,7 @@ html.dark-mode .gh-content em {
 
 html.dark-mode .gh-content code {
     color: #fff;
+    background: #2f2f2f;
 }
 
 html.dark-mode hr {
@@ -2043,6 +2048,10 @@ html.dark-mode .kg-header-card h3.kg-header-card-subheader {
         color: rgba(255, 255, 255, 0.9);
     }
 
+    html.auto-color .gh-content pre {
+        background: #2f2f2f;
+    }
+
     html.auto-color .gh-content :not(pre) > code {
         background: color-mod(var(--color-darkgrey) l(+6%));
         border-color: color-mod(var(--color-darkmode) l(+8%));
@@ -2063,6 +2072,7 @@ html.dark-mode .kg-header-card h3.kg-header-card-subheader {
 
     html.auto-color .gh-content code {
         color: #fff;
+        background: #2f2f2f;
     }
 
     html.auto-color hr {
