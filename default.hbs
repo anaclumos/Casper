@@ -31,9 +31,6 @@
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-material-dark.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/prism.min.js"></script>
-    <script>
-    document.getElementById("ghost-version").innerText = document.getElementsByName("generator")[0].content;
-    </script>
 
     {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
     it should always be the last tag before the closing head tag --}}
@@ -110,6 +107,7 @@
 </script>
 <script src="{{asset "built/casper.js"}}"></script>
 <script>
+document.getElementById("ghost-version").innerText = document.getElementsByName("generator")[0].content;
 $(document).ready(function () {
     // Mobile Menu Trigger
     $('.gh-burger').click(function () {
