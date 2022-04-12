@@ -22,13 +22,6 @@
     this will take care of caching and cache-busting automatically --}}
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 
-    <script>
-    var links=document.querySelectorAll('a');
-    for(var i=0;i<links.length;i++){
-        if(links[i].hostname!=window.location.hostname){links[i].target='_blank';links[i].rel='noopener';}
-    }
-    
-    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-material-dark.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/prism.min.js"></script>
 
@@ -116,6 +109,10 @@ $(document).ready(function () {
     // FitVids - Makes video embeds responsive
     $(".gh-content").fitVids();
 });
+var links=document.querySelectorAll('a');
+for(var i=0;i<links.length;i++){
+    if(links[i].hostname!=window.location.hostname){links[i].target='_blank';links[i].rel='noopener';}
+}
 </script>
 
 {{!-- Ghost outputs required functional scripts with this tag - it should always be the last thing before the closing body tag --}}
