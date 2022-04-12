@@ -22,19 +22,13 @@
     this will take care of caching and cache-busting automatically --}}
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 
-    <link rel="apple-touch-icon" href="/content/images/2022/04/apple-touch.png">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7GMRW82QVZ"></script>
     <script>
     var links=document.querySelectorAll('a');
     for(var i=0;i<links.length;i++){
         if(links[i].hostname!=window.location.hostname){links[i].target='_blank';links[i].rel='noopener';}
     }
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-7GMRW82QVZ');
+    
     </script>
-    <meta name="theme-color" content="#5597ec">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-material-dark.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.19.0/prism.min.js"></script>
     <script>
