@@ -100,7 +100,8 @@ into the {body} tag of the default.hbs template --}}
         const now = new Date()
         const diff = now - date_obj
         const diff_in_days = Math.floor(diff / (1000 * 60 * 60 * 24))
-        if (diff_in_days > 365) {
+        const diff_in_years = Math.floor(diff_in_days / 365)
+        if (diff_in_years > 0) {
             const title = document.querySelector("meta[property='og:title']").getAttribute('content').replace(/\s/g, '+')
             console.log(`https://www.google.com/search?q=${title}&tbs=qdr:y`)
             const template = ` <div
@@ -113,7 +114,7 @@ into the {body} tag of the default.hbs template --}}
                 class="kg-header-card-subheader"
                 id="this-post-is-more-than-1-year-old-things-might-ve-changed-brplease-note-that-i-might-not-agree-with-this-post-anymore-"
             >
-                This post is more than a year old. Things might've changed.<br />Please note that I might not agree with this post
+                This post is more than ${diff_in_years} year${diff_in_years > 1 ? "s" : ""} old. Things might've changed.<br />Please note that I might not agree with this post
                 anymore.
             </h3>
             <a href="https://www.google.com/search?q=${title}&tbs=qdr:y" class="kg-header-card-button" target="_blank" rel="noopener"
