@@ -94,6 +94,35 @@ into the {body} tag of the default.hbs template --}}
 
 <section class="article-comments gh-canvas">
     <script src="https://giscus.app/client.js" data-repo="anaclumos/cho-sh-comments" data-repo-id="R_kgDOHJDTpg" data-category="General" data-category-id="DIC_kwDOHJDTps4COeJf" data-mapping="og:title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async></script>
+    <script>
+        const date = document.body.querySelector('time').getAttribute('datetime')
+        const date_obj = new Date(date)
+        const now = new Date()
+        const diff = now - date_obj
+        const diff_in_days = Math.floor(diff / (1000 * 60 * 60 * 24))
+        if (diff_in_days > 365) {
+            const title = document.querySelector("meta[property='og:title']").getAttribute('content').replace(/\s/g, '+')
+            console.log(`https://www.google.com/search?q=${title}&tbs=qdr:y`)
+            const template = ` <div
+            class="kg-card kg-header-card kg-width-full kg-size-small kg-style-dark"
+            style=""
+            data-kg-background-image=""
+            >
+            <h2 class="kg-header-card-header" id="before-you-read-">Wait...</h2>
+            <h3
+                class="kg-header-card-subheader"
+                id="this-post-is-more-than-1-year-old-things-might-ve-changed-brplease-note-that-i-might-not-agree-with-this-post-anymore-"
+            >
+                This post is more than a year old. Things might've changed.<br />Please note that I might not agree with this post
+                anymore.
+            </h3>
+            <a href="https://www.google.com/search?q=${title}&tbs=qdr:y" class="kg-header-card-button" target="_blank" rel="noopener"
+                >Look for more recent results</a
+            >
+            </div>`
+            document.body.querySelector('section.gh-content.gh-canvas').insertAdjacentHTML('afterbegin', template)
+        }
+    </script>
 </section>
        
 
