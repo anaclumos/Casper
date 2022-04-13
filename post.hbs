@@ -102,23 +102,16 @@ into the {body} tag of the default.hbs template --}}
         const diff_in_days = Math.floor(diff / (1000 * 60 * 60 * 24))
         const diff_in_years = Math.floor(diff_in_days / 365)
         if (diff_in_years > 0) {
-            const title = document.querySelector("meta[property='og:title']").getAttribute('content').replace(/\s/g, '+')
+            const title = document.querySelector("meta[property='og:title']").getAttribute('content')
+            const escaped_title = title.replace(/\s/g, '+')
             console.log(`https://www.google.com/search?q=${title}&tbs=qdr:y`)
-            const template = ` <div
-            class="kg-card kg-header-card kg-width-full kg-size-small kg-style-dark"
-            style=""
-            data-kg-background-image=""
-            >
-            <h2 class="kg-header-card-header" id="before-you-read-">Wait...</h2>
-            <h3
-                class="kg-header-card-subheader"
-                id="this-post-is-more-than-1-year-old-things-might-ve-changed-brplease-note-that-i-might-not-agree-with-this-post-anymore-"
-            >
-                This post aged more than ${diff_in_years > 1 ? diff_in_years + " years" : "a year"}.<br />That's enough time for things to change.<br />I might not agree with this post
-                anymore.
+            const template = ` <div class="kg-card kg-header-card kg-width-full kg-size-small kg-style-dark">
+            <h2 class="kg-header-card-header">This post aged more than ${diff_in_years > 1 ? diff_in_years + " years" : "a year"}.</h2>
+            <h3 class="kg-header-card-subheader">
+                That's enough time for things to change.<br />I might not agree with this post anymore.
             </h3>
-            <a href="https://www.google.com/search?q=${title}&tbs=qdr:y" class="kg-header-card-button" target="_blank" rel="noopener"
-                >Look for more recent results</a
+            <a href="https://www.google.com/search?q=${escaped_title}&tbs=qdr:y" class="kg-header-card-button" target="_blank" rel="noopener"
+                >Google "${title}"</a
             >
             </div>`
             document.body.querySelector('section.gh-content.gh-canvas').insertAdjacentHTML('afterbegin', template)
