@@ -239,7 +239,8 @@ pre, code, kbd, samp {
     height: 40px;
     max-width: 200px;
     text-align: center;
-    word-break: break-all;
+    word-wrap: break-word;
+    word-break: keep-all;
 }
 
 .gh-head-logo {
@@ -592,7 +593,8 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     flex-direction: column;
     min-height: 220px;
     background-size: cover;
-    word-break: break-word;
+    word-wrap: break-word;
+    word-break: keep-all;
 }
 
 @media (max-width: 700px) {
@@ -683,7 +685,8 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     overflow-y: hidden;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    word-break: break-word;
+    word-wrap: break-word;
+    word-break: keep-all;
 }
 
 .post-card-meta {
@@ -895,7 +898,8 @@ make sure this only happens on large viewports / desktop-ish devices.
 
 .article {
     padding: 8vmin 0;
-    word-break: break-word;
+    word-wrap: break-word;
+    word-break: keep-all;
 }
 
 .article-header {
@@ -1053,7 +1057,8 @@ is the very first element in the post content */
 .gh-content a {
     color: var(--ghost-accent-color);
     text-decoration: underline;
-    word-break: break-word;
+    word-wrap: break-word;
+    word-break: keep-all;
 }
 
 .gh-content > blockquote:not([class]),
