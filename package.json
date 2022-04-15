@@ -12,14 +12,7 @@
         "mobile": "assets/screenshot-mobile.jpg"
     },
     "scripts": {
-        "dev": "gulp",
-        "zip": "gulp zip",
-        "test": "gscan .",
-        "test:ci": "gscan --fatal --verbose .",
-        "pretest": "gulp build",
-        "preship": "yarn test",
-        "ship": "gulp build && git add . && git commit -m \"shipping...\" &&  git push origin main",
-        "postship": "git fetch && gulp release"
+        "ship": "gulp build && git add . && git commit -m \"shipping...\" &&  git push origin main"
     },
     "author": {
         "name": "Ghost Foundation",
