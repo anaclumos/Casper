@@ -900,7 +900,6 @@ make sure this only happens on large viewports / desktop-ish devices.
     padding: 8vmin 0;
     word-wrap: break-word;
     word-break: keep-all;
-    text-align: justify;
 }
 
 .article-header {
