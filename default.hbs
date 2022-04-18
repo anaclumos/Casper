@@ -99,19 +99,27 @@
 </script>
 <script src="{{asset "built/casper.js"}}"></script>
 <script>
-document.getElementById("ghost-version").innerText = document.getElementsByName("generator")[0].content.replace(/Ghost/g, "👻");
+document.getElementById('ghost-version').innerText = document
+  .getElementsByName('generator')[0]
+  .content.replace(/Ghost/g, '👻')
 $(document).ready(function () {
-    // Mobile Menu Trigger
-    $('.gh-burger').click(function () {
-        $('body').toggleClass('gh-head-open');
-    });
-    // FitVids - Makes video embeds responsive
-    $(".gh-content").fitVids();
-});
-var links=document.querySelectorAll('a');
-for(var i=0;i<links.length;i++){
-    if(links[i].hostname!=window.location.hostname){links[i].target='_blank';links[i].rel='noopener';}
+  // Mobile Menu Trigger
+  $('.gh-burger').click(function () {
+    $('body').toggleClass('gh-head-open')
+  })
+  // FitVids - Makes video embeds responsive
+  $('.gh-content').fitVids()
+})
+var links = document.querySelectorAll('a')
+for (var i = 0; i < links.length; i++) {
+  if (links[i].hostname != window.location.hostname) {
+    links[i].target = '_blank'
+    links[i].rel = 'noopener'
+  }
 }
+document.addEventListener('DOMContentLoaded', () => {
+  hljs.highlightAll()
+})
 </script>
 
 {{!-- Ghost outputs required functional scripts with this tag - it should always be the last thing before the closing body tag --}}
