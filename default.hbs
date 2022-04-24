@@ -120,15 +120,6 @@ for (var i = 0; i < links.length; i++) {
 document.addEventListener('DOMContentLoaded', () => {
   hljs.highlightAll()
 })
-const noimages = document.getElementsByClassName("no-image");
-while(noimages.length) {
-    noimages[0].classList.remove("no-image");
-}
-const themeColor = document.querySelector("meta[name=theme-color]")?.getAttribute("content").replace("#", "");
-let images = document.getElementsByClassName("post-card-auto-generated-og-image");
-for (let i = 0; i < images.length; i++) {
-  images[i].src = `https://cho-sh-og-image.vercel.app/**${encodeURIComponent(images[i].alt)}**.png?theme=%23${themeColor}&md=1&fontSize=100px&images=https%3A%2F%2Fcho.sh%2Ffavicon.png`
-}
 </script>
 
 {{!-- Ghost outputs required functional scripts with this tag - it should always be the last thing before the closing body tag --}}
